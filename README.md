@@ -34,16 +34,30 @@ Web Application:
 2. Navigate to the project directory:
 
     ```bash
-    cd Loan_prediction
+    cd loan-prediction
     ```
 
-3. Create a virtual environment and install dependencies:
-
+3. Install dependencies:
+   
     ```bash
     pip install -r requirements.txt
     ```
-4. Run the Streamlit Application:
+5. Start the MLflow tracking server:
 
-  ```bash
+      ```bash
     mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns
     ```
+
+6. Run the Streamlit app:
+
+  ```bash
+streamlit run loan_app.py
+ ```
+7. Open your browser and navigate to http://localhost:8501
+
+
+
+## Deployment
+
+The application is deployed on Streamlit Cloud. The deployment URL is https://loan-prediction-mlops.streamlit.app/.
+
